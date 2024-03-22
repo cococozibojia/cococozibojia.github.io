@@ -62,16 +62,8 @@
 Recent advancements in video generation have been remarkable, yet many existing methods struggle with issues of consistency and poor text-video alignment. Moreover, the field lacks effective techniques for text-guided video inpainting, a stark contrast to the well-explored domain of text-guided image inpainting. To this end, this paper proposes a novel text-guided video inpainting model that achieves better consistency, controllability and compatibility. Specifically, we introduce a simple but efficient motion capture module to preserve motion consistency, and design an instance-aware region selection instead of a random region selection to obtain better textual controllability, and utilize a novel strategy to inject some personalized models into our CoCoCo model and thus obtain better model compatibility. Extensive experiments show that our model can generate high-quality video clips. Meanwhile, our model shows better motion consistency, textual controllability and model compatibility.    </p>
 
     <p class="title is-size-4 mt-5 has-text-centered"> Motion Capture Module </p>
-
-    <table class="table">
-      <tbody>
-        <tr> 
-          <th> <video muted controls autoplay loop> <source src="videos/output.mp4" type="video/mp4"> </video> </th>
-        </tr>
-        <tr>
-          <th class="has-text-centered"> test video2 </th>
-        </tr>
-    </table>
+    <video muted controls autoplay loop> <source src="videos/output2.mp4" type="video/mp4"> </video> </th>
+    <th class="has-text-centered"> test video </th>
     
     <p class="content has-text-centered is-size-6">
       We propose a novel motion capture module. It consists of three types attention block, including two previously used temporal attention layers, a newly introduced damped global attention layer and a textual cross attention layer. The new motion capture module can enable the model to have better motion consistency and text-video controllability.

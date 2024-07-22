@@ -14,28 +14,28 @@
     CoCoCo
   </title>
   <style>
-  /* 布局表格和标签的样式 */
-  .table-with-labels {
-    display: table; /* 以表格方式展示 */
-    width: 100%; /* 宽度100% */
-    border-collapse: collapse; /* 合并边框 */
-    border: 1px solid #ccc; /* 表格边框 */
+  /* 样式用来布局表格和标签 */
+  .table-container {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
   }
-  .table-with-labels-row {
-    display: table-row; /* 表格行 */
-  }
-  .table-with-labels-cell {
-    display: table-cell; /* 表格单元格 */
-    border: 1px solid #ccc; /* 边框 */
-    padding: 8px; /* 内边距 */
-  }
-  .label-cell {
-    width: 120px; /* 标签列固定宽度 */
+  .label-column {
+    width: 120px; /* 标签列的固定宽度 */
+    padding: 10px; /* 内边距 */
+    text-align: right; /* 文字右对齐 */
     font-weight: bold; /* 加粗 */
-    text-align: right; /* 右对齐 */
   }
-  .content-cell {
-    padding-left: 10px; /* 左边距 */
+  .content-column {
+    flex: 1; /* 剩余空间全部给内容列 */
+  }
+  table {
+    border-collapse: collapse; /* 合并边框 */
+    width: 100%; /* 表格宽度100% */
+  }
+  th, td {
+    border: 1px solid #ccc; /* 边框样式 */
+    padding: 8px; /* 内边距 */
+    text-align: left; /* 文字左对齐 */
   }
 </style>
   <link rel="icon" href="icon.ico">
@@ -170,21 +170,13 @@ Recent advancements in video generation have been remarkable, yet many existing 
 
   We compare our COCOCO with AVID by using same video samples.
 
-<div class="table-with-labels">
-  <div class="table-with-labels-row">
-    <div class="table-with-labels-cell label-cell">标签1:</div>
-    <div class="table-with-labels-cell content-cell">内容1</div>
+<div class="table-container">
+  <div class="label-column">
+    <p>标签1:</p>
+    <p>标签2:</p>
+    <p>标签3:</p>
   </div>
-  <div class="table-with-labels-row">
-    <div class="table-with-labels-cell label-cell">标签2:</div>
-    <div class="table-with-labels-cell content-cell">内容2</div>
-  </div>
-  <div class="table-with-labels-row">
-    <div class="table-with-labels-cell label-cell">标签3:</div>
-    <div class="table-with-labels-cell content-cell">内容3</div>
-  </div>
-</div>
-    
+  <div class="content-column">
 <table>
     <tr>
     <td><img src="images/image_mask1.gif", style="width: 72.5%;"></td>
@@ -208,6 +200,8 @@ Recent advancements in video generation have been remarkable, yet many existing 
     <td><img src="images/cococo3.gif", style="width: 72.5%;"></td>
     </tr>
 </table>
+  </div>
+</div>
     
 <!-- citation -->
     <div class="card mt-4">
